@@ -1,7 +1,7 @@
 export const people = [
   {
     id: '1',
-    name: 'filaberta',
+    name: 'Filaberta',
     image: 'http://placekitten.com/200/300',
     image2: 'http://placekitten.com/800/450',
     description:
@@ -9,7 +9,7 @@ export const people = [
   },
   {
     id: '2',
-    name: 'garfield',
+    name: 'Garfield',
     image: 'http://placekitten.com/200/300',
     image2: 'http://placekitten.com/800/450',
     description:
@@ -17,7 +17,7 @@ export const people = [
   },
   {
     id: '3',
-    name: 'pancake',
+    name: 'Pancake',
     image: 'http://placekitten.com/200/300',
     image2: 'http://placekitten.com/800/450',
     description:
@@ -25,7 +25,7 @@ export const people = [
   },
   {
     id: '4',
-    name: 'rocket',
+    name: 'Rocket',
     image: 'http://placekitten.com/200/300',
     image2: 'http://placekitten.com/800/450',
     description:

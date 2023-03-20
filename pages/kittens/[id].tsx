@@ -29,7 +29,7 @@ export default function PersonPage() {
       <img src={data.image2} alt="kitten pic" />
       <h1>{data.name}</h1>
       <p>{data.description}</p>
-      <Link href="/">Back</Link>
+      <Link href="/kittens">Back</Link>
     </div>
   );
 }
