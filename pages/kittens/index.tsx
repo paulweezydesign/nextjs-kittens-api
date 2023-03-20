@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import KittensComponent from '../../components/Kittens'
 import type { Kittens } from '../../interfaces/kittens'
-
+import Navbar from '../../components/Navbar'
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 export default function KittensPage() {
@@ -12,10 +12,13 @@ export default function KittensPage() {
   if (!data) return null
 
   return (
+    <>
+    <Navbar />
     <ul>
       {data.map((p) => (
         <KittensComponent key={p.id} kittens={p} />
       ))}
     </ul>
+    </>
   )
 }
