@@ -1,11 +1,11 @@
 import useSWR from 'swr'
-import PersonComponent from '../components/Person'
-import type { Person } from '../interfaces'
+import KittensComponent from '../../components/Kittens'
+import type { Kittens } from '../../interfaces/kittens'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-export default function Kittens() {
-  const { data, error, isLoading } = useSWR<Person[]>('/api/people', fetcher)
+export default function KittensPage() {
+  const { data, error, isLoading } = useSWR<Kittens[]>('/api/kittens', fetcher)
 
   if (error) return <div>Failed to load</div>
   if (isLoading) return <div>Loading...</div>
@@ -14,7 +14,7 @@ export default function Kittens() {
   return (
     <ul>
       {data.map((p) => (
-        <PersonComponent key={p.id} person={p} />
+        <KittensComponent key={p.id} kittens={p} />
       ))}
     </ul>
   )

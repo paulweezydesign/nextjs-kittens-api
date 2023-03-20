@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
-import type { Person, ResponseError } from '../../interfaces';
+import type { Kittens, ResponseError } from '../../interfaces/kittens';
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
@@ -13,12 +13,12 @@ const fetcher = async (url: string) => {
   return data;
 };
 
-export default function PersonPage() {
+export default function KittenPage() {
   const { query } = useRouter();
   const { data, error, isLoading, isValidating } = useSWR<
-    Person,
+   Kittens ,
     ResponseError
-  >(() => (query.id ? `/api/people/${query.id}` : null), fetcher);
+  >(() => (query.id ? `/api/kittens/${query.id}` : null), fetcher);
 
   if (error) return <div>{error.message}</div>;
   if (isLoading) return <div>Loading...</div>;

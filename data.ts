@@ -1,4 +1,4 @@
-export const people = [
+export const kittens = [
   {
     id: '1',
     name: 'Filaberta',
